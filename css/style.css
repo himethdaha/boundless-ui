@@ -293,6 +293,10 @@ After pseudo element is trated like a child element, of the element we're choosi
           top: 3rem;
           left: -103%;
           transform: scale(1.1); } }
+      @media only screen and (max-width: 37.5em) {
+        .about__images__img--img1 {
+          top: 3rem;
+          left: -106%; } }
     .about__images__img--img2 {
       position: absolute;
       top: 6%;
@@ -302,6 +306,10 @@ After pseudo element is trated like a child element, of the element we're choosi
           top: 3rem;
           left: 97%;
           transform: scale(1.1); } }
+      @media only screen and (max-width: 37.5em) {
+        .about__images__img--img2 {
+          top: 3rem;
+          left: 94%; } }
     .about__images__img--img3 {
       top: 25%;
       left: 20%; }
@@ -310,6 +318,10 @@ After pseudo element is trated like a child element, of the element we're choosi
           top: 2rem;
           left: -3%;
           transform: scale(1.2); } }
+      @media only screen and (max-width: 37.5em) {
+        .about__images__img--img3 {
+          top: 2rem;
+          left: -4%; } }
     .about__images__img:hover {
       z-index: 10;
       transform: scale(1.2) translateY(-0.5rem);
