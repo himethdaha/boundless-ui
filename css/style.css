@@ -1044,7 +1044,7 @@ Steps
     top: 4%; }
     @media only screen and (max-width: 37.5em) {
       .navigation__label {
-        right: 15%;
+        right: 8%;
         top: 4%; } }
   .navigation__background {
     height: 6rem;
@@ -1058,7 +1058,7 @@ Steps
     top: 4.5%; }
     @media only screen and (max-width: 37.5em) {
       .navigation__background {
-        right: 15%;
+        right: 8%;
         top: 4.5%; } }
   .navigation__navbar {
     position: fixed;
