@@ -282,8 +282,8 @@ After pseudo element is trated like a child element, of the element we're choosi
         box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2); } }
     @media only screen and (max-width: 37.5em) {
       .about__images__img {
-        width: 140.55px;
-        height: 100.98px;
+        width: 149.87px;
+        height: 152.36px;
         box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2); } }
     .about__images__img--img1 {
       position: absolute;
@@ -1035,7 +1035,7 @@ Steps
     top: 4%; }
     @media only screen and (max-width: 37.5em) {
       .navigation__label {
-        right: 20%;
+        right: 15%;
         top: 4%; } }
   .navigation__background {
     height: 6rem;
@@ -1049,7 +1049,7 @@ Steps
     top: 4.5%; }
     @media only screen and (max-width: 37.5em) {
       .navigation__background {
-        right: 20%;
+        right: 15%;
         top: 4.5%; } }
   .navigation__navbar {
     position: fixed;

@@ -17,8 +17,9 @@
 
     //Media query for <= 600px
     @include respond(phone) {
-      width: 140.55px;
-      height: 100.98px;
+      // width: 150%;
+      width: 149.87px;
+      height: 152.36px;
       box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2);
     }
 
