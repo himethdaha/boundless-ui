@@ -542,14 +542,14 @@ After pseudo element is trated like a child element, of the element we're choosi
     transform: rotateY(0deg); }
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .tours__card {
-      width: 35rem;
+      width: 60rem;
       height: auto;
       border-radius: 4px;
       background-color: #fff;
       box-shadow: 0rem 2.2rem 3rem rgba(0, 0, 0, 0.3); }
       .tours__card__side {
         overflow: hidden;
-        width: 35rem;
+        width: 60rem;
         height: auto;
         position: relative;
         box-shadow: none; }
@@ -578,6 +578,12 @@ After pseudo element is trated like a child element, of the element we're choosi
         transform: rotateY(0deg); }
       .tours__card:hover .tours__card__side--back {
         transform: rotateY(0deg); } }
+  @media only screen and (max-width: 37.5em) {
+    .tours__card {
+      width: 45rem; }
+      .tours__card__side {
+        overflow: hidden;
+        width: 45rem; } }
 
 .stories__container {
   padding: 5rem;
