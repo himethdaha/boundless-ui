@@ -282,8 +282,7 @@ After pseudo element is trated like a child element, of the element we're choosi
         box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2); } }
     @media only screen and (max-width: 37.5em) {
       .about__images__img {
-        width: 149.87px;
-        height: 152.36px;
+        width: 100px;
         box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2); } }
     .about__images__img--img1 {
       position: absolute;
