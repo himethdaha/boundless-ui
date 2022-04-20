@@ -15,6 +15,13 @@
       box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2);
     }
 
+    //Media query for <= 600px
+    @include respond(phone) {
+      width: 140.55px;
+      height: 100.98px;
+      box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
     &--img1 {
       position: absolute;
       top: -1rem;
