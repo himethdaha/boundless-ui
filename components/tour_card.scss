@@ -324,9 +324,13 @@
 
   //At 400px the form breaks
   @media only screen and (max-width: 25em) {
-    width: 40rem;
+    width: 35rem;
     &__side {
-      width: 40rem;
+      width: 35rem;
+    }
+
+    &__heading {
+      font-size: 2rem;
     }
   }
 }

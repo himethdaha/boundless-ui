@@ -586,9 +586,11 @@ After pseudo element is trated like a child element, of the element we're choosi
         width: 45rem; } }
   @media only screen and (max-width: 25em) {
     .tours__card {
-      width: 40rem; }
+      width: 35rem; }
       .tours__card__side {
-        width: 40rem; } }
+        width: 35rem; }
+      .tours__card__heading {
+        font-size: 2rem; } }
 
 .stories__container {
   padding: 5rem;
