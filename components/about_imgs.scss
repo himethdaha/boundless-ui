@@ -1,0 +1,64 @@
+.about__images {
+  position: relative;
+  &__img {
+    height: 50%;
+    width: 40%;
+    box-shadow: 0px 3.3rem 2rem rgba(0, 0, 0, 0.25);
+    position: relative;
+    transition: all 0.3s;
+    outline-offset: 1.2rem;
+
+    //Media query for <= 900px
+    @include respond(tab-port) {
+      width: 164.55px;
+      height: 126.98px;
+      box-shadow: 0px 2rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    &--img1 {
+      position: absolute;
+      top: -1rem;
+      left: 10%;
+
+      //Media query for <= 900px
+      @include respond(tab-port) {
+        top: 3rem;
+        left: -103%;
+
+        transform: scale(1.1);
+      }
+    }
+    &--img2 {
+      position: absolute;
+      top: 6%;
+      left: 33%;
+
+      //Media query for <= 900px
+      @include respond(tab-port) {
+        top: 3rem;
+        left: 97%;
+
+        transform: scale(1.1);
+      }
+    }
+    &--img3 {
+      top: 25%;
+      left: 20%;
+
+      //Media query for <= 900px
+      @include respond(tab-port) {
+        top: 2rem;
+        left: -3%;
+
+        transform: scale(1.2);
+      }
+    }
+
+    &:hover {
+      z-index: 10;
+      transform: scale(1.2) translateY(-0.5rem);
+      box-shadow: 0px 4.3rem 2rem rgba(0, 0, 0, 0.35);
+      outline: 0.8rem solid rgb(0, 0, 0);
+    }
+  }
+}

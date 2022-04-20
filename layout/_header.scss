@@ -1,0 +1,23 @@
+.header {
+  height: 95vh;
+  width: 100%;
+  /* background-image: url(../img/heroImg.jpg); */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(85, 83, 83, 0.596),
+      rgba(53, 50, 50, 0.774)
+    ),
+    url(../img/heroImg.jpg);
+  background-size: cover;
+  //Sets the starting point of the image
+  background-position: top;
+  position: relative;
+
+  &__heading-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

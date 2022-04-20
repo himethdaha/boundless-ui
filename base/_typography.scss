@@ -1,0 +1,125 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  /* font-size: 16px; */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/*HERO SECTION*/
+.main-heading {
+  color: #fff;
+  text-transform: uppercase;
+
+  &__text-level-one {
+    display: block;
+    font-size: 15rem;
+    animation-name: moveInFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    //Media query for <= 900px
+    @include respond(tab-port) {
+      font-size: 13rem;
+      line-height: 1.4;
+    }
+
+    //Media query for <= 600px
+    @include respond(phone) {
+      font-size: 10rem;
+      line-height: 1.3;
+    }
+  }
+
+  &__text-level-two {
+    display: block;
+    font-size: 5rem;
+    font-weight: 400;
+    animation-name: moveInFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin-bottom: 5rem;
+
+    //Media query for <= 900px
+    @include respond(tab-port) {
+      font-size: 4rem;
+    }
+
+    //Media query for <= 600px
+    @include respond(phone) {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+/*COMMON SECONDARY HEADING*/
+.secondary__heading {
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  display: inline-block;
+
+  background-image: linear-gradient(to right, #414345, #232526);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  transition: all 0.2s;
+
+  //Media query for <= 900px
+  @include respond(tab-port) {
+    font-size: 3.8rem;
+  }
+
+  //Media query for <= 600px
+  @include respond(phone) {
+    font-size: 3.2rem;
+  }
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 2rem 3rem 2rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+/*COMMON THIRD HEADING*/
+.header__tertiary {
+  font-size: 2.2rem;
+  margin-bottom: 3.2rem;
+  opacity: 0.9;
+
+  //Media query for <= 900px
+  @include respond(tab-port) {
+    font-size: 2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  //Media query for <= 600px
+  @include respond(phone) {
+    font-size: 1.8rem;
+  }
+}
+
+/*ABOUT SECTION*/
+.about__description__text {
+  font-size: 2rem;
+  flex-wrap: wrap;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.stories__heading {
+  margin-top: 3rem;
+}
+
+/*BOOKING SECTION*/
+.booking__heading {
+  margin: 1rem 4rem;
+
+  //Media query for <= 600px
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}

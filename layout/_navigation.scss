@@ -1,0 +1,173 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+  &__label {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 10rem;
+    background-color: $white-background;
+    z-index: 2000;
+    position: fixed;
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+
+    right: 1%;
+    top: 4%;
+  }
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 10rem;
+    background-image: radial-gradient(#232029, #e7e9bb);
+    position: fixed;
+    z-index: 1000;
+    transition: transform 0.6s cubic-bezier(0.37, 0, 0.63, 1);
+
+    right: 1%;
+    top: 4.5%;
+  }
+  &__navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1500;
+    height: 100vh;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+    // transform: translate(-50%, -50%);
+  }
+  &__list {
+    list-style: none;
+    //Counter for the list items
+    counter-reset: links;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+  //Remember Links are inline elements
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    // padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 6rem;
+    color: rgb(49, 49, 49);
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    //To push the white color to the right completely
+    //This is like giving each color 120%  (which is the entire elements) size. so that half of the container is transparent and other white (120 + 120)
+    background-size: 240%;
+    transition: all 0.3s;
+
+    &::before {
+      counter-increment: links;
+      content: '0' counter(links);
+      font-size: 6rem;
+      font-weight: 100;
+      margin-right: 2rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    transform: translateX(1rem) rotate(0.1deg);
+    //Move the background in the X axis 100% of the entire element (from left-right)
+    //right is 100% horizontally
+    background-position: 100%;
+  }
+
+  //If the checkbox is checked scale the background
+  &__checkbox:checked ~ &__background {
+    transform: scale(90);
+  }
+
+  //If the checkbox is checked make the navigation visible
+  &__checkbox:checked ~ &__navbar {
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+  }
+
+  //Span Icon
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    // transition: all 0.3s;
+    //3 classes for the 3 lines
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 0.2rem;
+      display: inline-block;
+      background-color: #000;
+      position: absolute;
+      left: 50%;
+      transition: all 0.3s;
+      transform: translate(-50%, -50%);
+      backface-visibility: hidden;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+    }
+    &::before {
+      top: -0.6rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  //To move the before and after pseudo class lines on label hover
+  &__label:hover &__icon::before {
+    top: -0.8rem;
+  }
+
+  &__label:hover &__icon::after {
+    top: 1rem;
+  }
+
+  //To show the cancel icon when the checkbox is checked
+  //Make the span element hidden by giving a transparent bg-color
+  &__checkbox:checked + &__label &__icon {
+    background-color: transparent;
+  }
+
+  //Rotate the pseudo class lines to create the cross
+  /*
+  - goes from the top
+  + goes from the bottom*/
+  &__checkbox:checked + &__label &__icon::before {
+    top: 0;
+    left: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__label &__icon::after {
+    top: 0;
+    left: 0;
+    transform: rotate(-135deg);
+  }
+}
