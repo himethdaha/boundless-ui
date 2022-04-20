@@ -252,7 +252,7 @@
   // @include respond(tab-port) {
   //For touch devices too
   @media only screen and(max-width: 56.25em), only screen and(hover:none) {
-    width: 35rem;
+    width: 15rem;
     height: auto;
     border-radius: 4px;
     background-color: #fff;
@@ -260,7 +260,7 @@
 
     &__side {
       overflow: hidden;
-      width: 35rem;
+      width: 15rem;
       height: auto;
       position: relative;
       box-shadow: none;
