@@ -584,6 +584,11 @@ After pseudo element is trated like a child element, of the element we're choosi
       .tours__card__side {
         overflow: hidden;
         width: 45rem; } }
+  @media only screen and (max-width: 25em) {
+    .tours__card {
+      width: 40rem; }
+      .tours__card__side {
+        width: 40rem; } }
 
 .stories__container {
   padding: 5rem;
