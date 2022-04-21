@@ -843,14 +843,16 @@ Steps
   .popup__container {
     background-color: #fff;
     width: 70%;
+    height: auto;
     border-radius: 3px;
     display: flex;
-    margin: 15rem auto;
     justify-content: space-between;
+    margin: 15rem auto;
     overflow: hidden;
     position: relative;
     transform: scale(0.25);
-    transition: all 0.5s 0.2s; }
+    transition: all 0.5s 0.2s;
+    backface-visibility: hidden; }
     @media only screen and (max-width: 75em) {
       .popup__container {
         height: 55%; } }
@@ -860,7 +862,11 @@ Steps
     @media only screen and (max-width: 37.5em) {
       .popup__container {
         width: 95%;
-        height: 37%; } }
+        flex-direction: column;
+        padding-bottom: 3rem; } }
+    @media only screen and (max-width: 25em) {
+      .popup__container {
+        height: 50rem; } }
   .popup__close {
     position: absolute;
     top: -2%;
@@ -876,6 +882,9 @@ Steps
         top: -5%;
         right: 1%;
         font-size: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .popup__close {
+        color: #fff; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -884,14 +893,23 @@ Steps
   .popup__imgs {
     display: flex;
     flex-direction: column;
-    flex: 0 0 35%;
-    overflow: hidden; }
+    flex: 1;
+    overflow: hidden;
+    backface-visibility: hidden; }
+    @media only screen and (max-width: 37.5em) {
+      .popup__imgs {
+        flex-direction: row; } }
+    @media only screen and (max-width: 25em) {
+      .popup__imgs {
+        flex-direction: row; } }
   .popup__img {
     display: block;
     width: 100%;
     transition: all 0.4s; }
     .popup__img:hover {
       transform: scale(1.1); }
+    .popup__img__pic {
+      flex: 1; }
   .popup__text {
     display: flex;
     flex-direction: column;
@@ -906,6 +924,12 @@ Steps
     @media only screen and (max-width: 56.25em) {
       .popup__text {
         padding: 1rem 2.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .popup__text {
+        position: relative; } }
+    @media only screen and (max-width: 25em) {
+      .popup__text {
+        margin-top: -1rem; } }
   .popup__description {
     font-size: 3rem; }
     .popup__description:not(:last-child) {
@@ -938,9 +962,9 @@ Steps
         font-size: 1rem;
         width: 10rem;
         position: absolute;
-        top: 89%;
+        top: 95%;
         left: 50%;
-        transform: translateX(-50%); } }
+        transform: translateX(-50%) translateY(-0.5rem) !important; } }
 
 .header {
   height: 95vh;
